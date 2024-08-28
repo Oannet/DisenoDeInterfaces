@@ -20,6 +20,20 @@ function addTask() {
     }
 }
 
+function adjustListSize() {
+    const taskList = document.getElementById('taskList');
+    let maxHeight = 0;
+    document.querySelectorAll('.task-item').forEach(item => {
+        maxHeight += item.scrollHeight;
+    });
+    taskList.style.height = `${maxHeight}px`; // Ajusta la altura al contenido
+}
+
+// Llamar a adjustListSize cada vez que se añada o se elimine una tarea
+document.getElementById('addTaskBtn').addEventListener('click', () => {
+    setTimeout(adjustListSize, 100); // Asegura que se ajuste después de que la DOM haya sido actualizada
+});
+
 function removeTask(taskItem) {
     const taskList = document.getElementById('taskList');
     taskList.removeChild(taskItem);
