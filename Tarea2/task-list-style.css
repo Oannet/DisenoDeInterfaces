@@ -1,54 +1,91 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #db8ad5;
     margin: 0;
     padding: 20px;
     color: #333;
 }
 
 #taskApp {
-    background: white;
+    background: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    width: 300px;
+    width: 900px;
     margin: auto;
+}
+
+#taskInput {
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    border: 2px solid #845EC2; /* Morado */
+    padding: 10px;
+    color: #333;
 }
 
 #taskList {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* Reducir el espacio entre elementos */
+    justify-content: flex-start;
 }
 
 .task-item {
     padding: 10px;
-    border-bottom: 1px solid #ccc;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    background-color: #0081CF; /* Azul */
+    color: white;
+    width: 150px;
+    height: 150px;
+    margin: 0; /* Remover margen */
+    box-sizing: border-box; /* Asegura que padding y borde no agreguen tamaño extra */
 }
 
 .task-completed {
     text-decoration: line-through;
-    color: #aaa;
+    color: #C34A36; /* Rojo */
 }
 
 button {
     cursor: pointer;
-    background-color: #007BFF;
+    background-color: #005691; /* Azul oscuro */
     color: white;
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
     margin-top: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #003b6e; /* Azul más oscuro */
+}
+
+#taskApp > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+button#addTaskBtn {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
 }
 
 #counters p {
-    background-color: #007BFF;
+    background-color: #845EC2; /* Morado */
     color: white;
     padding: 10px;
     border-radius: 5px;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }

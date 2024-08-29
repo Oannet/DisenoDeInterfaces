@@ -9,13 +9,15 @@
 <body>
     <div id="taskApp">
         <h1>Gestor de Tareas</h1>
-        <input type="text" id="taskInput" placeholder="Añade una nueva tarea">
-        <button id="addTaskBtn">Añadir Tarea</button>
-        <ul id="taskList"></ul>
-        <div id="counters">
-            <p id="taskCounter">Total de Tareas: 0</p>
-            <p id="completedCounter">Tareas Completadas: 0</p>
+        <textarea id="taskInput" placeholder="Añade una nueva tarea" rows="3" style="width:100%;"></textarea>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+            <button id="addTaskBtn">Añadir Tarea</button>
+            <div id="counters">
+                <p id="taskCounter">Total de Tareas: 0</p>
+                <p id="completedCounter">Tareas Completadas: 0</p>
+            </div>
         </div>
+        <ul id="taskList"></ul>
     </div>
     <script src="task-list-script.js"></script>
 </body>
