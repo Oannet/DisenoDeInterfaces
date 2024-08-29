@@ -32,15 +32,13 @@ body {
 }
 
 .task-item {
-    background-color: #0081CF; /* Blue */
-    color: white;
-    width: 150px;
-    height: 150px;
+    padding: 10px;
+    border-bottom: 1px solid #000000; /* Azul verdoso */
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 10px;
+    flex-direction: row;
+    background-color: #ffffff; /* Amarillo claro */
 }
 
 .task-completed {
