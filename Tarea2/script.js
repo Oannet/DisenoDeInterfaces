@@ -7,11 +7,15 @@ document.getElementById('taskInput').addEventListener('input', function() {
 function addTask() {
     const taskInput = document.getElementById('taskInput');
     const taskList = document.getElementById('taskList');
-    const taskName = taskInput.value.trim();
+    let taskName = taskInput.value.trim();
+
+    // Convertir saltos de línea en <br> para HTML
+    taskName = taskName.replace(/\n/g, '<br>');
+
     if (taskName !== '') {
         const taskItem = document.createElement('li');
         taskItem.className = 'list-group-item task-item';
-        taskItem.textContent = taskName;
+        taskItem.innerHTML = taskName; // Usar innerHTML para interpretar el <br>
         taskItem.addEventListener('click', () => toggleTaskCompleted(taskItem));
         const deleteBtn = document.createElement('button');
         deleteBtn.textContent = 'Eliminar';
