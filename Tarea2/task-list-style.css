@@ -13,11 +13,14 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     width: 900px;
     margin: auto;
+    overflow-y: hidden;
 }
 
 #taskInput {
     width: calc(100% - 40px);
     box-sizing: border-box;
+    overflow-y: hidden;
+    resize: none;
     border: 2px solid #845EC2; /* Morado */
     padding: 10px;
     color: #333;
@@ -26,24 +29,16 @@ body {
 #taskList {
     list-style: none;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px; /* Reducir el espacio entre elementos */
-    justify-content: flex-start;
 }
 
 .task-item {
     padding: 10px;
+    border-bottom: 1px solid #000000; /* Azul verdoso */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-    background-color: #0081CF; /* Azul */
-    color: white;
-    width: 150px;
-    height: 150px;
-    margin: 0; /* Remover margen */
-    box-sizing: border-box; /* Asegura que padding y borde no agreguen tamaño extra */
+    flex-direction: row;
+    background-color: #ffffff; /* Amarillo claro */
 }
 
 .task-completed {
@@ -53,7 +48,7 @@ body {
 
 button {
     cursor: pointer;
-    background-color: #005691; /* Azul oscuro */
+    background-color: #0081CF; /* Azul */
     color: white;
     border: none;
     padding: 5px 10px;
@@ -63,7 +58,7 @@ button {
 }
 
 button:hover {
-    background-color: #003b6e; /* Azul más oscuro */
+    background-color: #005691; /* Azul oscuro */
 }
 
 #taskApp > div {
@@ -74,10 +69,10 @@ button:hover {
 }
 
 button#addTaskBtn {
-    padding: 10px 20px;
-    font-size: 18px;
-    border-radius: 8px;
-    transition: background-color 0.3s;
+    padding: 10px 20px; /* Más relleno para un botón más grande */
+    font-size: 18px; /* Letra más grande para una mejor visibilidad */
+    border-radius: 8px; /* Bordes más redondeados para un aspecto más suave */
+    transition: background-color 0.3s; /* Mantiene la transición suave para el cambio de color */
 }
 
 #counters p {

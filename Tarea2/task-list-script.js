@@ -12,28 +12,13 @@ function addTask() {
         const taskItem = document.createElement('li');
         taskItem.className = 'list-group-item task-item';
         taskItem.textContent = taskName;
-        
-        // Estilo adicional para que el elemento se vea como un cuadrado azul
-        taskItem.style.backgroundColor = '#0081CF'; // Azul
-        taskItem.style.color = 'white';
-        taskItem.style.width = '150px';
-        taskItem.style.height = '150px';
-        taskItem.style.display = 'flex';
-        taskItem.style.flexDirection = 'column';
-        taskItem.style.justifyContent = 'space-between';
-        taskItem.style.alignItems = 'center';
-        taskItem.style.margin = '10px';
-
         taskItem.addEventListener('click', () => toggleTaskCompleted(taskItem));
-        
         const deleteBtn = document.createElement('button');
         deleteBtn.textContent = 'Eliminar';
-        deleteBtn.className = 'btn btn-danger btn-sm';
+        deleteBtn.className = 'btn btn-danger btn-sm float-right';
         deleteBtn.onclick = () => removeTask(taskItem);
-        
         taskItem.appendChild(deleteBtn);
         taskList.appendChild(taskItem);
-        
         taskInput.value = '';
         taskInput.style.height = 'auto'; // Restablece la altura después de agregar tarea
         updateCounters();
