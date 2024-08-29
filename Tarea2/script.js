@@ -11,9 +11,6 @@ function addTask() {
     let taskName = taskInput.value.trim();
 
     if (taskName !== '') {
-        // Reemplaza los saltos de línea por <br> para que se reflejen en la lista
-        taskName = taskName.replace(/\n/g, '<br>');
-
         const taskItem = document.createElement('li');
         taskItem.className = 'list-group-item task-item';
         taskItem.innerHTML = taskName; 
