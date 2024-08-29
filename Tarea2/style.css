@@ -21,7 +21,7 @@ body {
     box-sizing: border-box;
     overflow-y: hidden;
     resize: none;
-    border: 2px solid #845EC2; /* Morado */
+    border: 2px solid #845EC2; 
     padding: 10px;
     color: #333;
 }
@@ -33,22 +33,22 @@ body {
 
 .task-item {
     padding: 10px;
-    border-bottom: 1px solid #000000; /* Azul verdoso */
+    border-bottom: 1px solid #000000; 
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    background-color: #2ff5f5; /* Amarillo claro */
+    background-color: #2ff5f5; 
 }
 
 .task-completed {
     text-decoration: line-through;
-    color: #C34A36; /* Rojo */
+    color: #C34A36; 
 }
 
 button {
     cursor: pointer;
-    background-color: #0081CF; /* Azul */
+    background-color: #0081CF; 
     color: white;
     border: none;
     padding: 5px 10px;
@@ -58,7 +58,7 @@ button {
 }
 
 button:hover {
-    background-color: #005691; /* Azul oscuro */
+    background-color: #005691; 
 }
 
 #taskApp > div {
@@ -69,14 +69,14 @@ button:hover {
 }
 
 button#addTaskBtn {
-    padding: 10px 20px; /* Más relleno para un botón más grande */
-    font-size: 18px; /* Letra más grande para una mejor visibilidad */
-    border-radius: 8px; /* Bordes más redondeados para un aspecto más suave */
-    transition: background-color 0.3s; /* Mantiene la transición suave para el cambio de color */
+    padding: 10px 20px; 
+    font-size: 18px; 
+    border-radius: 8px; 
+    transition: background-color 0.3s; 
 }
 
 #counters p {
-    background-color: #845EC2; /* Morado */
+    background-color: #845EC2; 
     color: white;
     padding: 10px;
     border-radius: 5px;
